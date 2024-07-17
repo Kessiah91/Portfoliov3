@@ -33,22 +33,19 @@ const Grid = () => {
   }, []); // Empty dependency array ensures this effect runs only once on component mount
 
   return (
-    <div className="pb-[5rem]  pt-[9rem] containerlarh" id="about">
+    <div className="pb-[5rem] pt-[9rem] containerlarh" id="about">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
           fill="white"
-          // style={{ backgroundColor: "white" }} // Set background color for the first box
         />
         <Spotlight
           className="h-[80vh] w-[50vw] top-10 left-full"
           fill="purple"
-          // style={{ backgroundColor: "purple" }} // Set background color for the second box
         />
         <Spotlight
           className="left-80 top-28 h-[80vh] w-[50vw]"
           fill="blue"
-          // style={{ backgroundColor: "blue" }} // Set background color for the third box
         />
       </div>
 
@@ -61,16 +58,13 @@ const Grid = () => {
           </h3>
           <p>
             I am Frontend Developer experience in Creating Professional, Modern
-            Websites. Building Full stack Web Application with User
-            Authentication and Payment Gateway and All Features that You can
-            Imagine!
+            Websites. Constantly building on my skills to make any dream a reality.
           </p>
 
           <div className="social-media">
             <a
               href="https://www.linkedin.com/in/kessiah-providence9/"
               target="blank"
-              // style={{ "--i": 7 }}
               rel="noopener noreferrer"
             >
               <FaLinkedin />
@@ -78,7 +72,6 @@ const Grid = () => {
             <a
               href="https://github.com/Kessiah91"
               target="blank"
-              // style={{ "--i": 8 }}
               rel="noopener noreferrer"
             >
               <FaGithub />
@@ -86,7 +79,6 @@ const Grid = () => {
             <a
               href="https://x.com/KessiahProvide1"
               target="blank"
-              // style={{ "--i": 9 }}
               rel="noopener noreferrer"
             >
               <FaSquareXTwitter />
@@ -94,14 +86,13 @@ const Grid = () => {
             <a
               href="mailto:Kessiahp91@gmail.com"
               target="blank"
-              // style={{ "--i": 10 }}
               rel="noopener noreferrer"
             >
               <FaLink />
             </a>
           </div>
           <a
-            href="/resume.pdf"
+            href="/Kessiah-P-Resume.pdf"
             className="btn"
             download
             rel="noopener noreferrer"
@@ -111,9 +102,68 @@ const Grid = () => {
         </div>
 
         <div className="home-image">
-          <Image src={lapt} alt="Hero Image" />
+          <Image
+            src="/kessiah.jpg"
+            alt="Hero Image"
+            layout="fill"
+            objectFit="cover"
+            
+          />
         </div>
       </section>
+
+      <style jsx>{`
+        .home {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .home-content, .home-image {
+          flex: 1;
+          padding: 1rem;
+        }
+
+        .home-image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 2rem 0;
+          padding: 1rem;
+          box-sizing: border-box;
+          position: relative; // Added for layout fill
+          height: 500px; // Set a specific height for the image container
+        }
+
+        @media (max-width: 768px) {
+          .home {
+            flex-direction: column;
+          }
+
+          .home-image {
+            height: 50vh;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .home {
+            flex-direction: column;
+          }
+
+          .home-content, .home-image {
+            width: 100%;
+          }
+
+          .home-image {
+            height: 50vh;
+          }
+
+          .home-content {
+            margin-bottom: 2rem;
+          }
+        }
+      `}</style>
     </div>
   );
 };

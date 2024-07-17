@@ -33,16 +33,7 @@ const skills = [
       { logo: TypeScriptlogo, name: "TypeScript" },
     ],
   },
-  {
-    category: "Libraries",
-    items: [
-      { logo: SHADCNlogo, name: "SHADCN/UI" },
-      { logo: JQERYlogo, name: "JQuery" },
-      { logo: SASSlogo, name: "SASS" },
-      { logo: Framerlogo, name: "Framer Motion" },
-      { logo: GSAPlogo, name: "GSAP" },
-    ],
-  },
+  
   {
     category: "Frameworks",
     items: [
