@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1f242d;
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1.5s ease forwards;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    display: inline-block;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #0ef;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+    margin-top: -36px;
+}
+
+.home-image img {
+    width: 24vw;
+    border-radius: 11%;
+    animation: zoomIn 5s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.soIcon {
+    fill: #fff;
+    color: #fff;
+}
+
+.home-content h3 span {
+    color: #0ef;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    font-size: 16px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content span {
+    margin-top: 10px;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideBottom 0.3s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.social-media a:hover {
+    background: #0ef;
+    color: #1f242d;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: #1f242d;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 0.3s ease forwards;
+    animation-delay: 2s;
+}
+
+.containerlarh {
+    background-image: url('../public/bg.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.home {
+    background-image: url('../public/bg.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-24px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Example media query for mobile screens */
+@media screen and (max-width: 480px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home-image img {
+        width: 86vw;
+        height: 34vh;
+        object-fit: cover;
+    }
+}
+
+/* Add this to the end of your existing CSS */
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar a {
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    .home {
+        padding: 50px 5% 0;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .home-image img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .social-media a {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        margin: 20px 10px 20px 0;
+    }
+
+    .btn {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+}
+
+/* Adjustments for even smaller screens */
+@media screen and (max-width: 480px) {
+    .home {
+        padding-top: 40px;
+    }
+
+    .home-image img {
+        margin-top: 10px;
+    }
+
+    .social-media a {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        margin: 15px 8px 15px 0;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+}
+
+/* Example media query for tablet screens */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .navbar a {
+        margin-left: 20px;
+    }
+
+    .home-content {
+        max-width: 80%;
+    }
+
+    .home-image img {
+        width: 50vw;
+    }
+
+    .social-media a {
+        margin: 20px 10px 20px 0;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+/* Example media query for mobile screens */
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 20px 3%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .home-content {
+        max-width: 90%;
+    }
+
+    .home-image img {
+        width: 80vw;
+    }
+
+    .social-media a {
+        margin: 10px 5px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+}
