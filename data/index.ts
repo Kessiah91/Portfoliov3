@@ -219,7 +219,7 @@ export const socialMedia = [
   },
   {
     id: 3,
-    link: "https://kessiah91.github.io/restauraunt-gericht/",
+    link: "https://www.linkedin.com/in/kessiah-providence9/",
     img: "/link.svg",
   },
 ];
