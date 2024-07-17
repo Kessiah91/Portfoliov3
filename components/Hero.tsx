@@ -36,7 +36,7 @@ const Hero = () => {
             Let's Explore Web Development in Depth together
           </p>
           <TextGenerateEffect
-            words="Let's Work Professionally Together In a Modern Way🤝"
+            words="Let&apos;s Build Something Beautiful Together🤝"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 

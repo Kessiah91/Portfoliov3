@@ -51,10 +51,10 @@ const Grid = () => {
 
       <section className="home">
         <div className="home-content">
-          <h3>Hello, It's Me</h3>
+          <h3>Hello, It&apos;s Me</h3>
           <h1>Kessiah Providence</h1>
           <h3>
-            And I'm a <span className="multiple-text"></span>
+            And I&apos;m a <span className="multiple-text"></span>
           </h3>
           <p>
             I am Frontend Developer experience in Creating Professional, Modern

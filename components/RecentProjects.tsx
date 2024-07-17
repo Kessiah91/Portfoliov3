@@ -36,13 +36,15 @@ const RecentProjects = () => {
                     objectFit="cover"
                   />
                 </div>
-                <Image
-                  src={item.img}
-                  alt="cover"
-                  className="z-10 absolute bottom-0"
-                  width={500}
-                  height={300}
-                />
+                <div className="absolute bottom-0 w-full h-full">
+                  <Image
+                    src={item.img}
+                    alt="fit"
+                    layout="fill"
+                    objectFit="contain"
+                    objectPosition="bottom"
+                  />
+                </div>
               </div>
 
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
@@ -129,7 +131,7 @@ const RecentProjects = () => {
         }
 
         .iconlab{
-          width:23px !impotant
+          width:23px !important;
         }
       `}</style>
     </div>
